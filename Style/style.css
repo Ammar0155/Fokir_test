@@ -92,7 +92,7 @@ p {
   color: white;
   font-weight: 300;
 }
-.navbar .menu li a.active{
+.navbar .menu li a.active {
   color: #ff305b;
 }
 /* END Navbar */
@@ -116,48 +116,138 @@ p {
   font-size: 24px;
   color: white;
 }
-
-@keyframes text {
-  0%{content: "Designer";}
-  50%{content: "Developer";}
-  75%{content: "Designer";}
-  100%{content: "Developer";}
-  
-}
 .headerQoute h4 {
+  color: white;
   font-size: 24px;
   font-weight: 100;
-  overflow: hidden;
-  width:41.5 ;
-  margin: auto;
-  
-  color: white;
-  animation: wid 4s infinite alternate-reverse;
-  /* transform: translatex(20%); */
-}
-@keyframes wid {
-  0%{width: 22.5%;}
-  50%{width: 41.5%;}
-  75%{width: 22.5%;}
-  100%{width: 41.5%;}
-
-  
-}
-.headerQoute h4 span{
-  position: relative;
-  width: 100%;
 }
 
-.headerQoute h4 span::after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: translatex(105%);
-  animation: text 4s infinite alternate-reverse;
-  content: "Designer";
-  
+@keyframes typing {
+  0.0000%,
+  27.3488%,
+  54.5%,
+  73.5% {
+    content: "";
+  }
+  1.31579%,
+  26.2093%,
+  55.5%,
+  72.5% {
+    content: "D";
+  }
+  2.2791%,
+  25.0698%,
+  56.5%,
+  71.5% {
+    content: "De";
+  }
+  3.4186%,
+  23.9302%,
+  57.5%,
+  70.5% {
+    content: "Dev";
+  }
+  4.5581%,
+  22.7907%,
+  58.5%,
+  69.5% {
+    content: "Deve";
+  }
+  5.6977%,
+  21.6512%,
+  59.5%,
+  68.5% {
+    content: "Devel";
+  }
+  6.8372%,
+  20.5116%,
+  60.5%,
+  67.5% {
+    content: "Develo";
+  }
+  7.9767%,
+  19.3721%,
+  61.5%,
+  66.5% {
+    content: "Develop";
+  }
+  9.1163%,
+  18.2326%,
+  62.5%,
+  65.5% {
+    content: "Develope";
+  }
+  10.2558%,
+  17.0930%,
+  63.5%,
+  64.5% {
+    content: "Developer";
+  }
+
+  30.7674%,
+  53.5581% ,74.5%,92.5%{
+    content: "";
+  }
+  31.9070%,
+  52.4186% ,75.5%,91.5%{
+    content: "D";
+  }
+  33.0465%,
+  51.2791% ,76.5%,90.5%{
+    content: "De";
+  }
+  34.1860%,
+  50.1395% ,78.5%,89.5%{
+    content: "Des";
+  }
+  35.3256%,
+  49.0000% ,79.5%,88.5%{
+    content: "Desi";
+  }
+  36.4651%,
+  47.8605% ,80.5%,87.5%{
+    content: "Desig";
+  }
+  37.6047%,
+  46.7209% ,81.5%,86.5%{
+    content: "Design";
+  }
+  38.7441%,
+  45.5814% ,82.5%,85.5%{
+    content: "Designe";
+  }
+  39.8836%,
+  44.4419% ,83.5%,84.5%{
+    content: "Designer";
+  }
+
+
 }
 
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.typewriter {
+  --caret: currentcolor;
+}
+
+.typewriter::before {
+  content: "";
+  animation: typing 13.5s infinite;
+}
+
+.typewriter::after {
+  content: "";
+  border-right: 1px solid var(--caret);
+  animation: blink 0.5s linear infinite;
+}
 
 /* end header qoute */
 
@@ -183,41 +273,36 @@ p {
   position: absolute;
   width: 100%;
   height: 0%;
-  background-color: rgba(51, 51, 51,0.5);
+  background-color: rgba(51, 51, 51, 0.5);
   z-index: 2;
   bottom: 0;
   right: 0;
-  
+
   transition: height 1s;
   overflow: hidden;
- 
 }
-.about .about-img .list-container .social-icon{
+.about .about-img .list-container .social-icon {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
-.about .about-img div ul{
-  
+.about .about-img div ul {
   list-style: none;
 }
-.about .about-img div li{
+.about .about-img div li {
   display: inline-block;
- margin-left: 10px;
+  margin-left: 10px;
 }
-.about .about-img div li a{
+.about .about-img div li a {
   color: white;
   text-decoration: none;
- 
 }
-.about .about-img div li a:hover{
-  color:#ff305b;
-  
+.about .about-img div li a:hover {
+  color: #ff305b;
 }
 .about .about-img:hover .list-container {
   height: 99%;
-  
 }
 
 .about .about-img {
@@ -599,6 +684,23 @@ p {
   color: #f1c30d;
   margin: 20px 0px;
 }
+
+.fist-span,.second-span{
+  border: 1px solid #ff305b;
+  display: inline-block;
+  cursor: pointer;
+}
+.fist-span{
+  border-radius: 10px;
+  padding: 4px 12px;
+  background-color: #ff305b;
+}
+.second-span{
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+  margin:0px 3px;
+}
 /* end Feedback */
 
 /* Start blog */
@@ -619,6 +721,11 @@ p {
 }
 .blog .blog-cards .blog-row .blog-img img {
   width: 100%;
+}
+.blog .blog-cards .blog-row .blog-img iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 180px;
 }
 .blog .blog-cards .blog-row .context {
   background-color: white;
