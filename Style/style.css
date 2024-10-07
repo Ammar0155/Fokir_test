@@ -712,12 +712,12 @@ p {
 }
 
 .blog .blog-cards {
-  margin: 50px 0px;
+  margin: 30px 0px;
 }
 .blog .blog-cards .blog-row {
   width: 33.33%;
   float: left;
-  padding: 20px;
+  padding: 15px;
 }
 .blog .blog-cards .blog-row .blog-img img {
   width: 100%;
@@ -730,7 +730,7 @@ p {
 .blog .blog-cards .blog-row .context {
   background-color: white;
   text-align: left;
-  padding: 15px;
+  padding: 10px;
 }
 .blog .blog-cards .blog-row .context *:not(:first-child) {
   margin-top: 20px;
